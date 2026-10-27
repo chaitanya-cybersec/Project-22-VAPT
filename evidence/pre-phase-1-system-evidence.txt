@@ -1,0 +1,33 @@
+=== P22 Environment Evidence ===
+Tue Oct 27 12:03:42 PM IST 2026
+=== OS ===
+PRETTY_NAME="Kali GNU/Linux Rolling"
+NAME="Kali GNU/Linux"
+VERSION_ID="2026.3"
+VERSION="2026.3"
+VERSION_CODENAME=kali-rolling
+ID=kali
+ID_LIKE=debian
+HOME_URL="https://www.kali.org/"
+SUPPORT_URL="https://forums.kali.org/"
+BUG_REPORT_URL="https://bugs.kali.org/"
+ANSI_COLOR="1;31"
+=== Memory ===
+               total        used        free      shared  buff/cache   available
+Mem:           4.3Gi       1.2Gi       2.2Gi        48Mi       1.2Gi       3.1Gi
+Swap:          953Mi          0B       953Mi
+=== Disk ===
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/sda1        79G   17G   58G  23% /
+=== Network ===
+lo               UNKNOWN        127.0.0.1/8 ::1/128 
+eth0             UP             10.0.2.15/24 fe80::9760:b421:a218:bc66/64 
+docker0          UP             172.17.0.1/16 fe80::402b:c7ff:fedd:383d/64 
+veth60739e7@if2  UP             fe80::ec3f:7bff:fe00:c7f3/64 
+=== Git ===
+git version 2.53.0
+=== Docker ===
+Docker version 28.5.2+dfsg4, build 9cc6dea35e9a963f281434761c656fba4ac43aed
+=== Running Containers ===
+CONTAINER ID   IMAGE                   COMMAND                  CREATED        STATUS          PORTS                      NAMES
+44e329f223d3   bkimminich/juice-shop   "/nodejs/bin/node /j…"   10 hours ago   Up 30 minutes   127.0.0.1:3000->3000/tcp   juice-shop
