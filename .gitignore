@@ -1,0 +1,28 @@
+# Secrets and credentials
+.env
+.env.*
+*.pem
+*.key
+*credentials*
+*secrets*
+
+# Temporary and backup files
+*.tmp
+*.bak
+*~
+
+# Python artifacts
+__pycache__/
+*.py[cod]
+.venv/
+
+# Packet captures and archives
+*.pcap
+*.pcapng
+*.zip
+*.tar
+*.gz
+
+# Editor and OS files
+.DS_Store
+Thumbs.db
