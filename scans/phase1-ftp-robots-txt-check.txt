@@ -1,0 +1,5 @@
+Target: http://127.0.0.1:3000/ftp/robots.txt
+Method: GET
+Authentication: None supplied
+HTTP status: 403
+Conclusion: Access to this path was forbidden in this test. The reason for the restriction is not yet established.
