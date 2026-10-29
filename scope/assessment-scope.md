@@ -7,7 +7,7 @@
   Penetration Testing (VAPT)
 - Practice application: OWASP Juice Shop
 - Date documented: 27 October 2026
-- Stage: Pre-Phase 1
+- Stage: Phase 1 — Reconnaissance and Initial API Review
 
 ## 2. Objective
 
@@ -74,7 +74,10 @@ before sharing evidence publicly.
 - HTTP response verified: Yes (HTTP 200 OK)
 - Kali Firefox access verified: Yes
 - Scope documented: Yes
-- Formal testing started: No
+- Initial reconnaissance started: Yes
+- Initial API review performed: Yes
+- Vulnerability validation: In progress
+- Formal assessment closure: Pending review
 
 ## 9. Phase Gate
 
