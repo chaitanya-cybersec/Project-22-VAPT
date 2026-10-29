@@ -61,3 +61,15 @@ No destructive actions or denial-of-service testing were performed.
   files unnecessarily.
 - Investigate the response-length discrepancy separately.
 - Determine severity only after sufficient impact evidence exists.
+
+## Content Review — legal.md
+The accessible /ftp/legal.md file was reviewed during the
+local lab assessment. Its visible content consisted primarily
+of Lorem ipsum placeholder text under "Legal Information"
+and "Terms of Use" headings.
+
+No credentials or personal data were apparent in the reviewed
+output. This single file does not demonstrate sensitive-data
+exposure. The security impact of the directory listing remains
+undetermined and must not be inferred from file extensions or
+filenames alone.
