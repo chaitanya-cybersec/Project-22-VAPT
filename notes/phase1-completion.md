@@ -10,7 +10,7 @@ OWASP Juice Shop running locally at `http://127.0.0.1:3000`
 Phase 1 — Reconnaissance and Initial API Review
 
 ## Completed Activities
-- Verified the local Juice Shop application was responding.
+- Verified that the local Juice Shop application was responding.
 - Captured Nmap service-detection output for port 3000.
 - Saved HTTP response headers and the homepage.
 - Retrieved and reviewed the API documentation.
@@ -19,6 +19,10 @@ Phase 1 — Reconnaissance and Initial API Review
 - Tested an unauthenticated GET request to `/b2b/v2/orders`; it returned HTTP 401.
 - Sent an OPTIONS request to `/b2b/v2/orders`; it returned HTTP 204 and advertised HTTP methods.
 - Captured the `/ftp` directory listing and documented it as a preliminary finding.
+- Verified that `/ftp/legal.md` returned HTTP 200 without supplying authentication.
+- Reviewed `legal.md`; its visible content consisted primarily of placeholder text.
+- Verified that `/ftp/robots.txt` returned HTTP 403; the reason is unknown.
+- Recorded the reproducible 12-byte response-length discrepancy for `/ftp`.
 - Saved scan outputs, notes, and screenshots in the project repository.
 
 ## Evidence Locations
@@ -31,25 +35,28 @@ Phase 1 — Reconnaissance and Initial API Review
 - `scans/phase1-b2b-orders-options.txt`
 - `scans/phase1-ftp-listing.html`
 - `scans/phase1-ftp-headers.txt`
+- `scans/phase1-ftp-legal-md-check.txt`
+- `scans/phase1-ftp-robots-txt-check.txt`
 - `screenshots/phase1-ftp-directory-listing.png`
 - `notes/phase1-api-inventory.md`
 - `notes/phase1-finding-001.md`
 
 ## Preliminary Finding
-The `/ftp` route returned HTTP 200 and displayed filenames, sizes, and timestamps. The impact and sensitivity of the listed files have not yet been validated, so severity has not been assigned.
+The `/ftp` route returned HTTP 200 and displayed filenames, sizes, and timestamps. The listed `legal.md` file was accessible without supplied authentication, but its reviewed content consisted primarily of placeholder text. Meaningful sensitive-data exposure and security impact have not been demonstrated; severity remains unassigned.
 
 ## Limitations and Unresolved Questions
 - No authentication bypass has been confirmed.
 - The security impact of wildcard CORS has not been established.
 - The OPTIONS response does not prove that all advertised methods can perform protected actions.
-- The `/ftp` listing's security impact remains unvalidated.
-- A 12-byte discrepancy was observed between the reported response length and the downloaded `/ftp` listing body; its cause remains unresolved.
+- The `/ftp` listing's security impact remains undetermined.
+- A 12-byte discrepancy was observed between the declared response length and the downloaded `/ftp` listing body; its cause remains unresolved.
+- The reason `/ftp/robots.txt` returned HTTP 403 is unknown.
 
 ## Safety and Scope
-Testing is restricted to the authorized local OWASP Juice Shop lab. No order was submitted during the documented API reconnaissance.
+Testing is restricted to the authorized local OWASP Juice Shop lab. No order was submitted during the documented API reconnaissance. No destructive actions or denial-of-service testing were performed.
 
 ## Git Status
-Phase 1 evidence was committed and pushed to the private GitHub repository in commit `a71ce4e`.
+The latest documentation changes are tracked in Git and pushed to the private GitHub repository. Confirm the final commit and clean working tree before declaring the documentation review complete.
 
 ## Completion Status
-Reconnaissance evidence and initial API documentation are recorded. Phase 1 should be considered ready for closure after the scope, README, and evidence are reviewed for consistency.
+Reconnaissance and initial API review activities are documented. The documentation review can be completed after consistency checks. Vulnerability validation, impact assessment, severity assignment, and final VAPT reporting remain outstanding.
