@@ -1,0 +1,6 @@
+Target: http://127.0.0.1:3000/ftp/legal.md
+Method: GET
+Authentication: None supplied
+HTTP status: 200
+Purpose: Verify access to a listed, ordinary documentation file.
+Conclusion: The listed file is accessible; content sensitivity and security impact are not yet established.
